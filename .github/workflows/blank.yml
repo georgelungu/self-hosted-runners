@@ -39,15 +39,15 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.2
         
-      - name: .Net Build
+      - name: Build DotNet
         # You may pin to the exact commit or the version.
-        # uses: EasyDesk/action-dotnet-build@d2c47d8701e3ea8db03dcabaacb37204fe123a22
-        uses: EasyDesk/action-dotnet-build@v1.0.0
-        with:
-          # Additional build arguments to pass to 'dotnet build'.
-          build-args: 'dotnet build'
-          # The build configuration to use (defaults to 'Release').
-          # build-configuration: # optional, default is Release
-          # The path to the project or solution to build (defaults to the current directory).
-          path: './selfRunner/selfRunner.csproj'
-      
+        # uses: Elskom/build-dotnet@54d97a0f7d5d5ca946404976db00d27386b09254
+        uses: Elskom/build-dotnet@v1.1.1
+        # with:
+          # Filepath of the solution of which contains all the projects to be built, optionally tested and packed, relative to root of repository
+          # SOLUTION_FILE_PATH: # optional, default is 
+          # # Flag to toggle running unit tests for the projects built, disabled by default
+          # TEST: # optional
+          # # Flag to toggle packing the projects built
+          # PACK: # optional, default is true
+          
