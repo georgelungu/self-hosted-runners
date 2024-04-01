@@ -50,4 +50,10 @@ jobs:
           # TEST: # optional
           # # Flag to toggle packing the projects built
           # PACK: # optional, default is true
+
+      - name: Trust
+        run: dotnet dev-certs https --trust
+
+      - name: Run webApi
+        run: dotnet run --launch-profile https
           
