@@ -54,6 +54,10 @@ jobs:
       - name: Check current dir
         run: ls
 
+        
+      - name: Change directory
+        run: cd ./TodoApi
+
       - name: Trust
         run: dotnet dev-certs https --trust
 
