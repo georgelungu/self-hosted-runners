@@ -51,6 +51,9 @@ jobs:
           # # Flag to toggle packing the projects built
           # PACK: # optional, default is true
 
+      - name: Check current dir
+        run: ls
+
       - name: Trust
         run: dotnet dev-certs https --trust
 
